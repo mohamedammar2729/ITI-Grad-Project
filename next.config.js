@@ -3,7 +3,6 @@
 
 
 const nextConfig = {
-  distDir: 'dist',
   compiler: {
     styledComponents: true,
   },
