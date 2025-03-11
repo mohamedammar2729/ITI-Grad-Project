@@ -12,9 +12,11 @@ const compat = new FlatCompat({
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals"),
   {
-    parser: "@babel/eslint-parser",
-    parserOptions: {
-      requireConfigFile: false,
+    languageOptions: {
+      parser: require("@babel/eslint-parser"),
+      parserOptions: {
+        requireConfigFile: false,
+      },
     },
   },
 ];
