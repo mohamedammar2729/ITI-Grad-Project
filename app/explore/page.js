@@ -2,9 +2,11 @@ import React from "react";
 import ReadyPrograms from "../Components/ReadyPrograms";
 import Container from "@mui/material/Container";
 
+export const dynamic = "force-dynamic"; // Add this line
+
 async function fetchPrograms() {
   const res = await fetch("http://localhost:4000/api/readyprogram", {
-    cache: "no-store", // تعطيل التخزين المؤقت للبيانات
+    cache: "no-store",
   });
 
   if (!res.ok) throw new Error("فشل في جلب البيانات");
@@ -14,7 +16,6 @@ async function fetchPrograms() {
 
 const Page = async () => {
   const programsData = await fetchPrograms();
-
 
   return (
     <Container
